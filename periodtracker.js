@@ -24,7 +24,13 @@ function getColor(daysLeft, maxDays) {
   let r = 255;
   let g = Math.round(255 * (1 - ratio));
   let b = Math.round(255 * (1 - ratio));
-  return Color.rgb(r, g, b); // <-- FIXED: use Color.rgb
+  // Convert to hex string
+  function toHex(x) {
+    const hex = x.toString(16);
+    return hex.length === 1 ? "0" + hex : hex;
+  }
+  const hex = `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+  return new Color(hex);
 }
 const daysLeftColor = getColor(daysLeft, cycleLength);
 
