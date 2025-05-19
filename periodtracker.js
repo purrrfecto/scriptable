@@ -24,7 +24,7 @@ function getColor(daysLeft, maxDays) {
   let r = 255;
   let g = Math.round(255 * (1 - ratio));
   let b = Math.round(255 * (1 - ratio));
-  return new Color(r, g, b);
+  return Color.rgb(r, g, b); // <-- FIXED: use Color.rgb
 }
 const daysLeftColor = getColor(daysLeft, cycleLength);
 
