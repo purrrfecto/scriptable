@@ -7,7 +7,7 @@
 
 // --- CONFIGURATION ---
 const KEYCHAIN_KEY = "day_counter_start_date";
-const EVENT_NAME = "Days Since Last Can"; // Change this to your event title
+const EVENT_NAME = "Days Since 🐱"; // Change this to your event title
 
 // Get or initialize the start date
 let startDateStr = Keychain.contains(KEYCHAIN_KEY) ? Keychain.get(KEYCHAIN_KEY) : null;
